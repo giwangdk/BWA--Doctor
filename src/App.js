@@ -1,6 +1,4 @@
 import React from 'react';
-// import {Splash} from './pages';
-import {Splash, GetStarted} from './pages';
 import {NavigationContainer} from '@react-navigation/native';
 import Router from './router';
 

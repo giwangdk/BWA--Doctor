@@ -1,28 +1,28 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 
-const Button = ({type, title}) => {
+const Button = ({type, title, onPress}) => {
   return (
-    <View style={styles.container(type)}>
+    <TouchableOpacity style={styles.container(type)} onPress={onPress}>
       <Text style={styles.text(type)}>{title}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
 export default Button;
 
 const styles = StyleSheet.create({
-    container: (type)=>({
-        backgroundColor: type === 'secondary' ? 'white' : '#0BCAD4',
-        paddingVertical: 10,
-        borderRadius:10,
-    }),
-    text: (type)=>({
-        fontSize: 16,
-        fontWeight: '600',
-        fontFamily: 'Nunito-SemiBold',
-        textAlign:'center',
-        color:type === 'secondary' ? '#112340' : 'white',
-    }),
+  container: type => ({
+    backgroundColor: type === 'secondary' ? 'white' : '#0BCAD4',
+    paddingVertical: 10,
+    borderRadius: 10,
+  }),
+  text: type => ({
+    fontSize: 16,
+    fontWeight: '600',
+    fontFamily: 'Nunito-SemiBold',
+    textAlign: 'center',
+    color: type === 'secondary' ? '#112340' : 'white',
+  }),
 });
