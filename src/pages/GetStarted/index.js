@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 28,
     marginTop:91,
-    color: "white",
-    fontFamily: 'Nunito-SemiBold'
+    color: 'white',
+    fontFamily: 'Nunito-SemiBold',
   },
 });
